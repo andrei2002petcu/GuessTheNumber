@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiWS1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="15"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="cash1.png"
+                SemanticProperties.Description="Stack of money"
+                HeightRequest="250"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Enter amount to convert"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="display"
+                Text="EUR to RON"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Euro to Romanian LEU"
+                FontSize="16"
+                HorizontalOptions="Center" />
+
+            <Entry
+                x:Name="entry"
+                Placeholder="Amount in EUR"
+                FontSize="14"
+                MaxLength="10"
+                HorizontalTextAlignment="Center"
+                Keyboard="Numeric"
+                TextChanged="entry_TextChanged"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="convert_btn"
+                Text="Convert"
+                HorizontalOptions="Center"
+                BackgroundColor="Green"
+                TextColor="White"
+                Clicked="convert_btn_Clicked"/>
+
+            <Button
+                Text="Go to Guess the Number"
+                HorizontalOptions="Center"
+                BackgroundColor="Green"
+                TextColor="White"
+                Clicked="Button_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
